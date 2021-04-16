@@ -3,8 +3,8 @@
 #include <nlohmann/json.hpp>
 namespace pathFinder {
 struct LatLng {
-  using Lat = double;
-  using Lng = double;
+  using Lat = float;
+  using Lng = float;
   Lat lat;
   Lng lng;
   LatLng() = default;
