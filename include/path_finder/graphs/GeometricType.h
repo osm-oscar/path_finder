@@ -1,6 +1,8 @@
 #pragma once
 #include <cmath>
 #include <nlohmann/json.hpp>
+#include <optional>
+
 namespace pathFinder {
 struct LatLng {
   using Lat = double;
