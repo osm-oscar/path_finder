@@ -6,13 +6,13 @@ namespace pathFinder {
 template <typename T, typename Allocator = std::allocator<T>>
 class VectorBase {
 public:
-  virtual T &operator[](size_t index);
+  virtual T &operator[](std::size_t index);
 
   virtual T *begin();
 
   virtual T *end();
 
-  virtual size_t size();
+  virtual std::size_t size();
 
   virtual void push_back(T element);
 
@@ -39,7 +39,7 @@ T *VectorBase<T, Allocator>::end() {
 }
 
 template <typename T, typename Allocator>
-size_t VectorBase<T, Allocator>::size() {
+std::size_t VectorBase<T, Allocator>::size() {
   return 0;
 }
 
