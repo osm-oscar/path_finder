@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <cstdint>
+#include <stddef.h>
 
 namespace pathFinder {
 template <typename T, typename Allocator = std::allocator<T>>

@@ -9,6 +9,7 @@
 #include <memory>
 #include <stack>
 #include <sys/mman.h>
+#include <stddef.h>
 
 namespace pathFinder {
 struct CHGraphCreateInfo {

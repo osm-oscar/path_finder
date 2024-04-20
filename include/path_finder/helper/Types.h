@@ -4,6 +4,7 @@
 #include <nlohmann/json.hpp>
 #include <path_finder/graphs/GeometricType.h>
 #include <vector>
+#include <stddef.h>
 
 namespace pathFinder {
 using NodeId = uint32_t;

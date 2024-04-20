@@ -1,6 +1,9 @@
 #pragma once
 #include "VectorBase.h"
 #include <vector>
+#include <cstdint>
+#include <stddef.h>
+
 namespace pathFinder {
 template <typename T, typename Allocator = std::allocator<T>>
 class RamVector : public VectorBase<T, Allocator> {
@@ -8,15 +11,15 @@ private:
   std::vector<T, Allocator> vec;
 
 public:
-  explicit RamVector(size_t size);
+  explicit RamVector(std::size_t size);
 
-  T &operator[](size_t index);
+  T &operator[](std::size_t index);
 
   T *begin();
 
   T *end();
 
-  size_t size();
+  std::size_t size();
 
   void push_back(T element);
 
@@ -30,7 +33,7 @@ public:
 };
 
 template <typename T, typename Allocator>
-T &RamVector<T, Allocator>::operator[](size_t index) {
+T &RamVector<T, Allocator>::operator[](std::size_t index) {
   return vec[index];
 }
 
@@ -45,7 +48,7 @@ T *RamVector<T, Allocator>::end() {
 }
 
 template <typename T, typename Allocator>
-size_t RamVector<T, Allocator>::size() {
+std::size_t RamVector<T, Allocator>::size() {
   return vec.size();
 }
 
@@ -55,7 +58,7 @@ void RamVector<T, Allocator>::push_back(T element) {
 }
 
 template <typename T, typename Allocator>
-RamVector<T, Allocator>::RamVector(size_t size) {
+RamVector<T, Allocator>::RamVector(std::size_t size) {
   vec(size);
 }
 
