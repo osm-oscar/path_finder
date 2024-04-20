@@ -24,7 +24,7 @@ public:
 };
 
 template <typename T, typename Allocator>
-T &VectorBase<T, Allocator>::operator[](size_t index) {
+T &VectorBase<T, Allocator>::operator[](std::size_t index) {
   return nullptr;
 }
 
